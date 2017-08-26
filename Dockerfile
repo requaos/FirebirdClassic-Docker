@@ -12,4 +12,4 @@ RUN /tmp/FirebirdCS-2.5.5.evo/install.sh -silent
 
 EXPOSE 3050/tcp
 
-CMD [ "/bin/bash", "-c", "chown -R firebird:firebird /db && xinetd -dontfork" ]
+CMD [ "xinetd", "-dontfork" ]
