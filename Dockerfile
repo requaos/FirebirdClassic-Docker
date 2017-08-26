@@ -11,4 +11,5 @@ RUN chmod +x /tmp/launch.sh && chmod +x /tmp/FirebirdCS-2.5.5.evo/install.sh && 
 
 EXPOSE 3050/tcp
 
-CMD [ "/tmp/launch.sh" ]
+ENTRYPOINT [ "/tmp/launch.sh" ]
+CMD [ "xinetd", "-dontfork" ]
