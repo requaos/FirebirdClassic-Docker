@@ -1544,6 +1544,8 @@ fi
 touch /tmp/EvolUDFs.log
 chmod a+w /tmp/EvolUDFs.log
 
+groupadd firebird
+useradd -G firebird firebird
 # Here we are installing from a install tar.gz file
 
 if [ -e scripts ]; then
