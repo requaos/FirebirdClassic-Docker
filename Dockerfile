@@ -10,4 +10,4 @@ RUN chmod +x /tmp/FirebirdCS-2.5.5.evo/install.sh && chmod +x /tmp/FirebirdCS-2.
 
 EXPOSE 3050/tcp
 
-CMD [ "xinetd" , "-dontfork" ]
+CMD [ "chown -R firebird:firebird /db && xinetd" , "-dontfork" ]
